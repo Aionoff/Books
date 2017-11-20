@@ -1,0 +1,6 @@
+.Element{
+  height: 480px;
+  width: 640px;
+  background: url("pirate.png") no-repeat;
+  background-position: calc(100% - 20px) calc(100% - 10px);
+}
