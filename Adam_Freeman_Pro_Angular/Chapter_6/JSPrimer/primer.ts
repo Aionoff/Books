@@ -1,11 +1,14 @@
-let myData = {
-  name: "Adam",
-  weather: "sunny",
+class MyClass {
+  constructor(name, weather){
+    this["name"] = name;
+    this["weather"] = weather;
+  }
 
-  printMessages: function(){
-    console.log("Hello " + this.name + ". ");
-    console.log("Today is " + this.weather + ".");
+  printMessages(){
+    console.log("Hello " + this["name"] + ". ");
+    console.log("Today is " + this["weather"] + ".");
   }
 };
 
-myData.printMessages();
+let myData = new MyClass("Adam", "sunny");
+myData.printMessages()
