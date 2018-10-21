@@ -6,7 +6,7 @@ var Name = (function () {
     }
     Object.defineProperty(Name.prototype, "nameMessage", {
         get: function () {
-            return 'Hello ' + this.first + ' ' + this.second;
+            return 'Hello ' + this["first"] + ' ' + this["second"];
         },
         enumerable: true,
         configurable: true
@@ -21,7 +21,7 @@ var WeatherLocation = (function () {
     }
     Object.defineProperty(WeatherLocation.prototype, "weatherMessage", {
         get: function () {
-            return 'It is ' + this.weather + ' in ' + this.city;
+            return 'It is ' + this["weather"] + ' in ' + this["city"];
         },
         enumerable: true,
         configurable: true

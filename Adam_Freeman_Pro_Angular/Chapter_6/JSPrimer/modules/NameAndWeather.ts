@@ -5,7 +5,7 @@ export class Name {
   }
 
   get nameMessage(){
-    return 'Hello ' + this.first + ' ' + this.second;
+    return 'Hello ' + this["first"] + ' ' + this["second"];
   }
 }
 
@@ -16,6 +16,6 @@ export class WeatherLocation{
   }
 
   get weatherMessage(){
-    return 'It is ' + this.weather + ' in ' + this.city;
+    return 'It is ' + this["weather"] + ' in ' + this["city"];
   }
 }

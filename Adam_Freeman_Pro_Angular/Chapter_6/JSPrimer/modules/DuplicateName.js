@@ -1,4 +1,4 @@
-ecport;
+"use strict";
 var Name = (function () {
     function Name() {
     }
@@ -11,3 +11,4 @@ var Name = (function () {
     });
     return Name;
 }());
+exports.Name = Name;
