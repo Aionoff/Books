@@ -1,26 +1,7 @@
-class MyClass {
-  constructor(name, weather){
-    this["name"] = name;
-    this["weather"] = weather;
-  }
+import {Name, WeatherLocation} from "./modules/NameAndWeather";
 
-  printMessages(){
-    console.log("Hello " + this["name"] + ". ");
-    console.log("Today is " + this["weather"] + ".");
-  }
-}
+let name = new Name("Adam", "Freeman");
+let loc = new WeatherLocation("raining", "London");
 
-class MySubClass extends MyClass {
-  constructor(name, weather, city){
-    super(name, weather);
-    this["city"] = city;
-  }
-
-  printMessages(){
-    super.printMessages();
-    console.log("You are in " + this["city"]);
-  }
-}
-
-let myData = new MySubClass("Adam", "sunny", "london");
-myData.printMessages()
+console.log(name.nameMessage);
+console.log(loc.weatherMessage); 
