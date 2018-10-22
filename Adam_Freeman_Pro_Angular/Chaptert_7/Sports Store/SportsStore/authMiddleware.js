@@ -16,10 +16,10 @@ module.exports = function(req, res, next){
     res.end();
     return;
   } else if ((req.url.startsWith("/products") && req.method != "GET")
-                || (req.url.startWith("/orders") && req.method != "POST")) {
+                || (req.url.startsWith("/orders") && req.method != "POST")) {
 
       let token = req.headers["authorixation"];
-      if(token != null && token.startWith("Bearer<")){
+      if(token != null && token.startsWith("Bearer<")){
         token = token.substring(7, token.length - 1);
         try{
           jwt.verify(token, APP_SECRET);
