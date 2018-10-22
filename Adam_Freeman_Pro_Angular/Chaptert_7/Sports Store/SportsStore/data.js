@@ -3,7 +3,7 @@ module.exports = function(){
     products: [
       { id: 1,
         name: "Kayak",
-        category: "Watersports"
+        category: "Watersports",
         description: "A boat for one person",
         price: 275
       },
