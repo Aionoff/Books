@@ -33,9 +33,9 @@
       <option value="8">8 per Page </option>
     </select>
     <div class="btn-group pull-xs-right">
-      <button *ngFor="let btn-outline-primery"
-          [class.active]="page == selectedPage">
-        {{ page }}
+      <button *counter="let page of pageCount" (click)="changePage(page)"
+      class="btn btn-outline-primary" [class.active]="page == selectedPage">  
+        {{page}}
       </button>
     </div>
   </div>
